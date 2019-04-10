@@ -14,6 +14,9 @@ new_float normal
 # Hide borders
 hide_edge_borders none
 
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
 # change borders
 bindsym $mod+u border none
 bindsym $mod+y border pixel 2
@@ -27,7 +30,7 @@ font pango:DejaVu Sans Mono 12
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator 
+bindsym $mod+Return exec kitty 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -141,8 +144,8 @@ set $ws1 1: Workspace
 set $ws2 2: Browser 
 set $ws3 3: Terminal 
 set $ws4 4: Media 
-set $ws5 5: Slack 
-set $ws6 6: Spotify 
+set $ws5 5: Spotify 
+set $ws6 6: Random 
 set $ws7 7: Random 
 set $ws8 8: KeePass 
 
@@ -260,9 +263,6 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-# Lock screen
-bindsym $mod+9 exec --no-startup-id blurlock
-
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
@@ -277,6 +277,7 @@ exec --no-startup-id start_conky_live_solarized
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
+exec --no-startup-id redshift-gtk
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation: https://i3wm.org/docs/userguide.html#xresources
@@ -334,4 +335,3 @@ bindsym $mod+m bar mode toggle
 # geoclue for redshift, currently not working properly- cannot fetch data
 # using manual location instead
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
-
