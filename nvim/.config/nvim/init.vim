@@ -120,3 +120,5 @@ colorscheme gruvbox
 " NERDTree - show hidden files
 let NERDTreeShowHidden=1
 
+" write sudo-permitted files from normal nvim
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
