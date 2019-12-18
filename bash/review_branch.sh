@@ -1,4 +1,6 @@
  #!/bin/bash
+ git checkout develop
+ git pull
  destinationBranch=`git rev-parse --abbrev-ref HEAD`
  reviewBranch=$1
  git fetch origin

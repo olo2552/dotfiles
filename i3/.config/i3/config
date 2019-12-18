@@ -341,6 +341,7 @@ exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 
 # Some apps don't need to have border by default
 for_window [class="Google-chrome"] border none
+for_window [class="Brave"] border none
 for_window [class="Chromium"] border none
 for_window [class="Evince"] border none
 

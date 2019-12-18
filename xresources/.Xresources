@@ -3,7 +3,7 @@
 
 ! font:
 
-Xft.dpi:       192 
+Xft.dpi:       152 
 Xft.antialias: true
 Xft.hinting:   true
 Xft.rgba:      rgb
